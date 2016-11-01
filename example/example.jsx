@@ -1,14 +1,3 @@
-# react-feature-toggles
-Declarative feature toggle framework for react
-
-
-## Install
-
-`npm install react-feature-toggles`
-
-## Usage
-
-```
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { FeatureToggleProvider, FeatureToggle } from '../lib/react-feature-toggles';
@@ -28,7 +17,7 @@ const ExampleComponent = () => (
   <FeatureToggleProvider featureToggleList={toggles}>
     <h1>Toggling Example</h1>
     <FeatureToggle featureName={toggleNames.SHOW_HELLO_WORLD}>
-      Toggle is on - Hello World
+      Hello World
     </FeatureToggle>
     <FeatureToggle featureName={toggleNames.SHOW_HELLO_WORLD} showOnlyWhenDisabled>
       Sorry, toggle is off
@@ -38,4 +27,3 @@ const ExampleComponent = () => (
 
 
 ReactDOM.render(<ExampleComponent />, document.getElementById('example'));
-```

@@ -1,0 +1,36 @@
+import { React, Enzyme, expect } from './TestHelpers';
+import { FeatureToggleProvider, FeatureToggle } from '../src';
+
+describe('<FeatureTogglesProvider />', () => {
+  const aChildComponent = (<section>Yay i am a child</section>);
+
+  const featureToggleList = {
+    thisOneIsEnabled: true,
+    thisOneIsDisabled: false
+  };
+
+  it('renders children', () => {
+    const exampleToggle = <FeatureToggle featureName="a name" />;
+    const featureToggleProvider = Enzyme.shallow(
+      <FeatureToggleProvider featureToggleList={featureToggleList}>
+        {aChildComponent}
+        {exampleToggle}
+      </FeatureToggleProvider>
+    );
+
+    expect(featureToggleProvider.contains(aChildComponent)).to.equal(true);
+    expect(featureToggleProvider.contains(exampleToggle)).to.equal(true);
+  });
+
+  it('passes feature toggle list to child feature toggles', () => {
+    const exampleToggle = <FeatureToggle featureName="a name" />;
+    const featureToggleProvider = Enzyme.mount(
+      <FeatureToggleProvider featureToggleList={featureToggleList}>
+        {aChildComponent}
+        {exampleToggle}
+      </FeatureToggleProvider>
+    );
+    expect(featureToggleProvider.find(FeatureToggle).node.context).to.eql({ featureToggleList });
+    expect(featureToggleProvider.find('section').node.context).to.equal(undefined);
+  });
+});
