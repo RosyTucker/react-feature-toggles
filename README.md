@@ -1,7 +1,6 @@
 # react-feature-toggles
 Declarative feature toggle framework for react
 
-
 ## Install
 
 `npm install react-feature-toggles`
@@ -39,3 +38,11 @@ const ExampleComponent = () => (
 
 ReactDOM.render(<ExampleComponent />, document.getElementById('example'));
 ```
+
+## Building the example
+
+- Clone this repo
+- Run `npm install`
+- Run `npm run build-example`
+- Open `example/example.html` in the browser
+- Play around with the toggle values
