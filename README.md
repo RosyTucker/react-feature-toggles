@@ -3,7 +3,7 @@ Declarative feature toggle framework for react, allowing you to get rid of test 
 
 ## Install
 
-`npm install react-feature-toggles`
+`npm install --save react-feature-toggles`
 
 ## Usage
 
