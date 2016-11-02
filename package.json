@@ -1,19 +1,24 @@
 {
-  "name": "react-feature-toggles",
-  "version": "1.0.0",
+  "name": "react-feature-toggle",
+  "version": "1.0.1",
   "description": "Feature toggle framework for react - down with feature branches",
   "main": "dist/",
   "scripts": {
-    "ci-build": "npm run lint && npm run test && npm run build",
+    "ci-build": "npm run install && npm run lint && npm run test && npm run build",
     "lint": "eslint src test --ext .jsx,.js",
     "test": "mocha test --recursive --compilers jsx?:babel-register --timeout 5000",
-    "build": "rm -rf lib && webpack -p --config webpack.config.babel.js",
-    "build-example": "webpack --config webpack.example.config.babel.js"
+    "build": "rm -rf lib && babel src/ -d lib/",
+    "build-example": "webpack --config webpack.example.config.babel.js",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RosyTucker/react-feature-toggles.git"
   },
+  "files": [
+    "lib",
+    "src"
+  ],
   "keywords": [
     "react",
     "feature",
@@ -50,5 +55,8 @@
     "react-dom": "15.3.2",
     "webpack": "1.13.3",
     "yargs": "6.3.0"
+  },
+  "dependencies": {
+    "react-feature-toggles": "1.0.0"
   }
 }

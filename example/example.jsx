@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { FeatureToggleProvider, FeatureToggle } from '../lib/react-feature-toggles';
+import { FeatureToggleProvider, FeatureToggle } from '../lib/index';
 
 const toggleNames = {
   SHOW_HELLO_WORLD: 'showHelloWorld'
