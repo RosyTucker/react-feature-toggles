@@ -7,7 +7,7 @@ Declarative feature toggle framework for react, allowing you to get rid of test 
 
 ## Usage
 
-```
+```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { FeatureToggleProvider, FeatureToggle } from 'react-feature-toggles';
