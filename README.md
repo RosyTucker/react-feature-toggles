@@ -7,7 +7,7 @@ Declarative feature toggle framework for react, allowing you to get rid of test 
 
 ## Usage
 
-Wrap your app in the `FeatureToggleProvider` and pass in a list of toggles, then use the `FeatureToggle` component throughout your app.
+Wrap your app in the `FeatureToggleProvider` and pass in a list of toggles, then use the `FeatureToggle` component throughout your application.
 
 ```javascript
 import React from 'react';
@@ -20,7 +20,7 @@ const toggles = {
   // ... add more here
 };
 
-const ExampleComponent = () => (
+const ExampleApp = () => (
   <FeatureToggleProvider featureToggleList={toggles}>
     <h1>Toggling Example</h1>
     <FeatureToggle featureName="SHOW_HELLO_WORLD">
@@ -33,7 +33,7 @@ const ExampleComponent = () => (
 );
 
 
-ReactDOM.render(<ExampleComponent />, document.getElementById('example'));
+ReactDOM.render(<ExampleApp />, document.getElementById('example'));
 ```
 
 ## Building the example
