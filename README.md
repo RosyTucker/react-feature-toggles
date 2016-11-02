@@ -1,5 +1,5 @@
 # react-feature-toggles
-Declarative feature toggle framework for react
+Declarative feature toggle framework for react, allowing you to get rid of test complications, and branching logic.
 
 ## Install
 
@@ -10,26 +10,21 @@ Declarative feature toggle framework for react
 ```
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { FeatureToggleProvider, FeatureToggle } from '../lib/react-feature-toggles';
-
-const toggleNames = {
-  SHOW_HELLO_WORLD: 'showHelloWorld'
-  // ... add more here
-};
+import { FeatureToggleProvider, FeatureToggle } from 'react-feature-toggles';
 
 const toggles = {
   // Try setting this to false
-  [toggleNames.SHOW_HELLO_WORLD]: false
+  SHOW_HELLO_WORLD: false
   // ... add more here
 };
 
 const ExampleComponent = () => (
   <FeatureToggleProvider featureToggleList={toggles}>
     <h1>Toggling Example</h1>
-    <FeatureToggle featureName={toggleNames.SHOW_HELLO_WORLD}>
+    <FeatureToggle featureName="SHOW_HELLO_WORLD">
       Toggle is on - Hello World
     </FeatureToggle>
-    <FeatureToggle featureName={toggleNames.SHOW_HELLO_WORLD} showOnlyWhenDisabled>
+    <FeatureToggle featureName="SHOW_HELLO_WORLD" showOnlyWhenDisabled>
       Sorry, toggle is off
     </FeatureToggle>
   </FeatureToggleProvider>
