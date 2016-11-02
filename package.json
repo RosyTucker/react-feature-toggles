@@ -1,5 +1,5 @@
 {
-  "name": "react-feature-toggle",
+  "name": "react-feature-toggles",
   "version": "1.0.1",
   "description": "Feature toggle framework for react - down with feature branches",
   "main": "dist/",
