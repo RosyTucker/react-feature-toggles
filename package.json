@@ -1,8 +1,8 @@
 {
   "name": "react-feature-toggles",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Feature toggle framework for react - down with feature branches",
-  "main": "dist/",
+  "main": "lib/",
   "scripts": {
     "ci-build": "npm run install && npm run lint && npm run test && npm run build",
     "lint": "eslint src test --ext .jsx,.js",
