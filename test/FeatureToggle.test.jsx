@@ -2,7 +2,7 @@ import { React, Enzyme, expect } from './TestHelpers';
 import { FeatureToggle } from '../src';
 
 describe('<FeatureToggle />', () => {
-  const aChildComponent = (<div>Yay I am a child</div>);
+  const aChildComponent = <div>Yay I am a child</div>;
   const expectedHtmlContent = '<div>Yay I am a child</div>';
 
   const featureNames = {
