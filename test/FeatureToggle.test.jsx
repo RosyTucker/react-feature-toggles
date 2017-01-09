@@ -2,8 +2,8 @@ import { React, Enzyme, expect } from './TestHelpers';
 import { FeatureToggle } from '../src';
 
 describe('<FeatureToggle />', () => {
-  const aChildComponent = (<div>Yay i am a child</div>);
-  const expectedHtmlContent = '<div>Yay i am a child</div>';
+  const aChildComponent = (<div>Yay I am a child</div>);
+  const expectedHtmlContent = '<div>Yay I am a child</div>';
 
   const featureNames = {
     thisOneIsEnabled: 'thisOneIsEnabled',
@@ -73,7 +73,7 @@ describe('<FeatureToggle />', () => {
       expect(featureToggle.html()).to.equal(expectedHtmlContent);
     });
 
-    it('does not render children is toggle with name is enabled and flag is set', () => {
+    it('does not render children if toggle with name is enabled and flag is set', () => {
       const featureToggle = Enzyme.shallow(
         <FeatureToggle featureName={featureNames.thisOneIsEnabled} showOnlyWhenDisabled>
           {aChildComponent}
