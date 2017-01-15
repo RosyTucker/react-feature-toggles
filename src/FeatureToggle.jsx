@@ -1,19 +1,22 @@
-import React from 'react';
+import React, { PropTypes, Component } from 'react';
 
-const FeatureToggle = ({ featureName, showOnlyWhenDisabled, children }, context) => {
-  const toggleState = context.featureToggleList[featureName];
-  const showContent = toggleState === !showOnlyWhenDisabled;
-  return showContent ? <div>{children}</div> : null;
-};
+class FeatureToggle extends Component {
+  render() {
+    const toggleState = this.context.featureToggleList[this.props.featureName];
+    const showContent = toggleState === !this.props.showOnlyWhenDisabled;
+
+    return showContent ? this.props.children : null;
+  }
+}
 
 FeatureToggle.contextTypes = {
-  featureToggleList: React.PropTypes.objectOf(React.PropTypes.bool).isRequired
+  featureToggleList: PropTypes.objectOf(PropTypes.bool).isRequired
 };
 
 FeatureToggle.propTypes = {
-  featureName: React.PropTypes.string.isRequired,
-  children: React.PropTypes.node,
-  showOnlyWhenDisabled: React.PropTypes.bool
+  featureName: PropTypes.string.isRequired,
+  children: PropTypes.node,
+  showOnlyWhenDisabled: PropTypes.bool
 };
 
 export default FeatureToggle;
