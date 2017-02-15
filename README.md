@@ -15,7 +15,7 @@ import ReactDOM from 'react-dom';
 import { FeatureToggleProvider, FeatureToggle } from 'react-feature-toggles';
 
 const toggles = {
-  // Try setting this to false
+  // Try setting this to true
   SHOW_HELLO_WORLD: false
   // ... add more here
 };
