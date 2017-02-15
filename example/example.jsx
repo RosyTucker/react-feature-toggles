@@ -8,7 +8,7 @@ const toggleNames = {
 };
 
 const toggles = {
-  // Try setting this to false
+  // Try setting this to true
   [toggleNames.SHOW_HELLO_WORLD]: false
   // ... add more here
 };
