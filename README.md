@@ -65,4 +65,5 @@ And then use the connected provider in place of the normal provider.
 
 ## Changes
 
-- Version 2.0 removes a containing div around the provider children, should you need this div, please add it in yourself. 
+- Version 2.0.2 unsures an undefined toggle is treated a false
+- Version 2.0.1 removes a containing div around the provider children, should you need this div, please add it in yourself. 

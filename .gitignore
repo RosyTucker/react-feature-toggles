@@ -5,3 +5,4 @@ dist
 lib
 example/bundle.js
 example/bundle.js.map
+npm-debug.log
