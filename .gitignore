@@ -4,3 +4,4 @@ node_modules
 dist
 lib
 example/bundle.js
+example/bundle.js.map

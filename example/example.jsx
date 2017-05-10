@@ -15,13 +15,15 @@ const toggles = {
 
 const ExampleComponent = () => (
   <FeatureToggleProvider featureToggleList={toggles}>
-    <h1>Toggling Example</h1>
-    <FeatureToggle featureName={toggleNames.SHOW_HELLO_WORLD}>
-      Hello World
-    </FeatureToggle>
-    <FeatureToggle featureName={toggleNames.SHOW_HELLO_WORLD} showOnlyWhenDisabled>
-      Sorry, toggle is off
-    </FeatureToggle>
+    <div>
+      <h1>Toggling Example</h1>
+      <FeatureToggle featureName={toggleNames.SHOW_HELLO_WORLD}>
+        <p>Hello World</p>
+      </FeatureToggle>
+      <FeatureToggle featureName={toggleNames.SHOW_HELLO_WORLD} showOnlyWhenDisabled>
+        <p>Sorry, toggle is off</p>
+      </FeatureToggle>
+    </div>
   </FeatureToggleProvider>
 );
 

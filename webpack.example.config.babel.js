@@ -20,6 +20,7 @@ export default {
     loaders: [babelLoader]
   },
   plugins: [],
+  devtool: 'source-maps',
   output: {
     path: appPath('example'),
     filename: 'bundle.js'
