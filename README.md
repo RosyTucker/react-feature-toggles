@@ -1,5 +1,5 @@
 # react-feature-toggles
-Declarative feature toggle framework for react, allowing you to get rid of test complications, and branching logic.
+Declarative feature toggle framework for react / react-native, allowing you to get rid of test complications, and branching logic.
 
 ## Install
 
