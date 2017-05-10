@@ -40,6 +40,20 @@ const ExampleApp = () => (
 ReactDOM.render(<ExampleApp />, document.getElementById('example'));
 ```
 
+### Redux
+
+To use with redux you may want to do something like: 
+
+```
+const mapStateToProps = state => ({
+  featureToggleList: state.features,
+});
+
+const ConnectedFeatureToggleProvider = connect(mapStateToProps)(FeatureToggleProvider);
+```
+
+And then use the connected provider in place of the normal provider.
+
 ## Building the example
 
 - Clone this repo
