@@ -1,6 +1,8 @@
 # react-feature-toggles
 Declarative feature toggle framework for react / react-native, allowing you to get rid of test complications, and branching logic.
 
+[![Build Status](https://travis-ci.org/RosyTucker/react-feature-toggles.svg?branch=master)](https://travis-ci.org/RosyTucker/react-feature-toggles)
+
 ## Install
 
 `npm install --save react-feature-toggles`
