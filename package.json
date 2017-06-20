@@ -6,7 +6,8 @@
   "scripts": {
     "ci-build": "npm install && npm run lint && npm run test && npm run build",
     "lint": "eslint src test --ext .jsx,.js",
-    "test": "mocha test --recursive --compilers jsx?:babel-register --timeout 5000",
+    "unit": "mocha test --recursive --compilers jsx?:babel-register --timeout 5000",
+    "test": "npm run lint && npm run test",
     "build": "rm -rf lib && babel src/ -d lib/",
     "build-example": "webpack --config webpack.example.config.babel.js",
     "prepublish": "npm run build"

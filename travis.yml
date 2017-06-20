@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+  - "7"
+
+deploy:
+  provider: npm
+  email: rosy.m.tucker@gmail.com
+  api_key: $NPM_TOKEN
