@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class FeatureToggleProvider extends React.Component {
   getChildContext() {
@@ -13,12 +14,12 @@ class FeatureToggleProvider extends React.Component {
 }
 
 FeatureToggleProvider.childContextTypes = {
-  featureToggleList: React.PropTypes.objectOf(React.PropTypes.bool).isRequired
+  featureToggleList: PropTypes.objectOf(PropTypes.bool).isRequired
 };
 
 FeatureToggleProvider.propTypes = {
-  featureToggleList: React.PropTypes.objectOf(React.PropTypes.bool),
-  children: React.PropTypes.node
+  featureToggleList: PropTypes.objectOf(PropTypes.bool),
+  children: PropTypes.node
 };
 
 export default FeatureToggleProvider;
