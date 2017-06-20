@@ -30,10 +30,10 @@ describe('<FeatureToggle />', () => {
 
   it('does not render wrapping div (or any other tag) - just children', () => {
     const featureToggle = Enzyme.shallow(
-        <FeatureToggle featureName={featureNames.thisOneIsEnabled}>
-          {aChildComponent}
-        </FeatureToggle>,
-        { context }
+      <FeatureToggle featureName={featureNames.thisOneIsEnabled}>
+        {aChildComponent}
+      </FeatureToggle>,
+      { context }
     );
 
     expect(featureToggle.html()).to.equal(expectedHtmlContent);
@@ -64,10 +64,10 @@ describe('<FeatureToggle />', () => {
 
     it('does not render wrapping div (or any other tag) - just children', () => {
       const featureToggle = Enzyme.shallow(
-          <FeatureToggle featureName={featureNames.thisOneIsDisabled} showOnlyWhenDisabled>
-            {aChildComponent}
-          </FeatureToggle>,
-          { context }
+        <FeatureToggle featureName={featureNames.thisOneIsDisabled} showOnlyWhenDisabled>
+          {aChildComponent}
+        </FeatureToggle>,
+        { context }
       );
 
       expect(featureToggle.html()).to.equal(expectedHtmlContent);

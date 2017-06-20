@@ -35,6 +35,9 @@
     "react": "15.x",
     "react-dom": "15.x"
   },
+  "dependencies": {
+    "prop-types": "^15.5.10"
+  },
   "devDependencies": {
     "babel-cli": "6.18.0",
     "babel-core": "6.18.0",
@@ -51,7 +54,6 @@
     "eslint-plugin-react": "6.4.1",
     "jsdomify": "3.1.0",
     "mocha": "3.1.2",
-    "prop-types": "^15.5.10",
     "react": "15.3.2",
     "react-addons-test-utils": "15.3.2",
     "react-dom": "15.3.2",
