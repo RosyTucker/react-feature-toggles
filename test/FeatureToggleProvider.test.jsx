@@ -13,8 +13,10 @@ describe('<FeatureTogglesProvider />', () => {
     const exampleToggle = <FeatureToggle featureName="a name" />;
     const featureToggleProvider = Enzyme.shallow(
       <FeatureToggleProvider featureToggleList={featureToggleList}>
-        {aChildComponent}
-        {exampleToggle}
+        <div>
+          {aChildComponent}
+          {exampleToggle}
+        </div>
       </FeatureToggleProvider>
     );
 
@@ -26,8 +28,10 @@ describe('<FeatureTogglesProvider />', () => {
     const exampleToggle = <FeatureToggle featureName="a name" />;
     const featureToggleProvider = Enzyme.mount(
       <FeatureToggleProvider featureToggleList={featureToggleList}>
-        {aChildComponent}
-        {exampleToggle}
+        <div>
+          {aChildComponent}
+          {exampleToggle}
+        </div>
       </FeatureToggleProvider>
     );
     expect(featureToggleProvider.find(FeatureToggle).node.context).to.eql({ featureToggleList });
