@@ -62,6 +62,8 @@ And then use the connected provider in place of the normal provider.
 - Open `example/example.html` in the browser
 - Play around with the toggle values
 
+## Making a pull request?
+- Make sure you've run `npm run ci-build` first
 
 ## Changes
 
