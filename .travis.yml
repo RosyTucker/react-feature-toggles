@@ -2,6 +2,9 @@ language: node_js
 node_js:
   - "7"
 
+before_deploy:
+  - npm install -g babel-cli
+
 deploy:
   provider: npm
   email: rosy.m.tucker@gmail.com
