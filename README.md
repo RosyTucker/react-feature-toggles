@@ -3,6 +3,8 @@ Declarative feature toggle framework for react / react-native, allowing you to g
 
 [![Build Status](https://travis-ci.org/RosyTucker/react-feature-toggles.svg?branch=master)](https://travis-ci.org/RosyTucker/react-feature-toggles)
 
+[![npm version](https://badge.fury.io/js/react-feature-toggles.svg)](https://badge.fury.io/js/react-feature-toggles)
+
 ## Install
 
 `npm install --save react-feature-toggles`
