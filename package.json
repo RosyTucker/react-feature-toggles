@@ -37,8 +37,7 @@
     "react-dom": "16.x"
   },
   "dependencies": {
-    "prop-types": "^15.6.0",
-    "react-feature-toggles": "^2.0.3"
+    "prop-types": "^15.6.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
