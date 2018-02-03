@@ -34,7 +34,9 @@ describe('<FeatureTogglesProvider />', () => {
         </div>
       </FeatureToggleProvider>
     );
-    expect(featureToggleProvider.find(FeatureToggle).node.context).to.eql({ featureToggleList });
-    expect(featureToggleProvider.find('section').node.context).to.equal(undefined);
+    expect(featureToggleProvider.find(FeatureToggle).instance().context)
+      .to.eql({ featureToggleList });
+    expect(featureToggleProvider.find('section').instance().context)
+      .to.equal(undefined);
   });
 });

@@ -22,4 +22,9 @@ FeatureToggleProvider.propTypes = {
   children: PropTypes.node
 };
 
+FeatureToggleProvider.defaultProps = {
+  children: [],
+  featureToggleList: []
+};
+
 export default FeatureToggleProvider;

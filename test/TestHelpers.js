@@ -1,6 +1,9 @@
 import jsdomify from 'jsdomify';
-import * as Enzyme from 'enzyme';
+import Enzyme from 'enzyme';
 import chai from 'chai';
+import Adapter from 'enzyme-adapter-react-16';
+
+Enzyme.configure({ adapter: new Adapter() });
 
 jsdomify.create();
 

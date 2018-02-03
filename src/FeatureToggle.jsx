@@ -19,4 +19,9 @@ FeatureToggle.propTypes = {
   showOnlyWhenDisabled: PropTypes.bool
 };
 
+FeatureToggle.defaultProps = {
+  showOnlyWhenDisabled: false,
+  children: []
+};
+
 export default FeatureToggle;
