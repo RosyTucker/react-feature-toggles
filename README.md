@@ -70,7 +70,8 @@ And then use the connected provider in place of the normal provider.
 - Make sure you've run `npm run ci-build` first
 
 ## Changes
-
+- Version 3.0.1 Remove self dependency (:/)
+- Version 3.0.0 Upgrade peer deps (and internal deps) for React 16
 - Version 2.0.3 Switch proptypes from React.PropTypes to the dedicated proptypes library
-- Version 2.0.2 unsures an undefined toggle is treated a false
+- Version 2.0.2 ensures an undefined toggle is treated a false
 - Version 2.0.1 removes a containing div around the provider children, should you need this div, please add it in yourself. 

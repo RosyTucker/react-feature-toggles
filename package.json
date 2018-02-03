@@ -1,6 +1,6 @@
 {
   "name": "react-feature-toggles",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Feature toggle framework for react - down with feature branches",
   "main": "lib/",
   "scripts": {
