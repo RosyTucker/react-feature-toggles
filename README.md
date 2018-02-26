@@ -30,10 +30,10 @@ const ExampleApp = () => (
   <FeatureToggleProvider featureToggleList={toggles}>
     <div>
       <h1>Toggling Example</h1>
-      <FeatureToggle featureName={toggleNames.SHOW_HELLO_WORLD}>
+      <FeatureToggle featureName={toggles.SHOW_HELLO_WORLD}>
         <p>Hello World</p>
       </FeatureToggle>
-      <FeatureToggle featureName={toggleNames.SHOW_HELLO_WORLD} showOnlyWhenDisabled>
+      <FeatureToggle featureName={toggles.SHOW_HELLO_WORLD} showOnlyWhenDisabled>
         <p>Sorry, toggle is off</p>
       </FeatureToggle>
     </div>
