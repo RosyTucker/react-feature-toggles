@@ -26,14 +26,16 @@ const toggles = {
   // ... add more here
 };
 
+const SHOW_HELLO_WORLD = 'SHOW_HELLO_WORLD'; // This can be import from a toggle-names.js file
+
 const ExampleApp = () => (
   <FeatureToggleProvider featureToggleList={toggles}>
     <div>
       <h1>Toggling Example</h1>
-      <FeatureToggle featureName={toggles.SHOW_HELLO_WORLD}>
+      <FeatureToggle featureName={SHOW_HELLO_WORLD}>
         <p>Hello World</p>
       </FeatureToggle>
-      <FeatureToggle featureName={toggles.SHOW_HELLO_WORLD} showOnlyWhenDisabled>
+      <FeatureToggle featureName={SHOW_HELLO_WORLD} showOnlyWhenDisabled>
         <p>Sorry, toggle is off</p>
       </FeatureToggle>
     </div>
