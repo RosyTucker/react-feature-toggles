@@ -18,30 +18,34 @@ Both `FeatureToggleProvider` and `FeatureToggle` must have only one child, this 
 ```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { FeatureToggleProvider, FeatureToggle } from 'react-feature-toggles';
+import { FeatureToggleProvider, FeatureToggle } from '../lib/index';
 
-const toggles = {
-  // Try setting this to true
-  SHOW_HELLO_WORLD: false
+const toggleNames = {
+  SHOW_HELLO_WORLD: 'showHelloWorld'
   // ... add more here
 };
 
-const ExampleApp = () => (
+const toggles = {
+  // Try setting this to true
+  [toggleNames.SHOW_HELLO_WORLD]: false
+  // ... add more here
+};
+
+const ExampleComponent = () => (
   <FeatureToggleProvider featureToggleList={toggles}>
     <div>
       <h1>Toggling Example</h1>
-      <FeatureToggle featureName={toggles.SHOW_HELLO_WORLD}>
+      <FeatureToggle featureName={toggleNames.SHOW_HELLO_WORLD}>
         <p>Hello World</p>
       </FeatureToggle>
-      <FeatureToggle featureName={toggles.SHOW_HELLO_WORLD} showOnlyWhenDisabled>
+      <FeatureToggle featureName={toggleNames.SHOW_HELLO_WORLD} showOnlyWhenDisabled>
         <p>Sorry, toggle is off</p>
       </FeatureToggle>
     </div>
   </FeatureToggleProvider>
 );
 
-
-ReactDOM.render(<ExampleApp />, document.getElementById('example'));
+ReactDOM.render(<ExampleComponent />, document.getElementById('example'));
 ```
 
 ### Redux
