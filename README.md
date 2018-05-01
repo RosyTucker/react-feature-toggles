@@ -74,6 +74,7 @@ And then use the connected provider in place of the normal provider.
 - Make sure you've run `npm run ci-build` first
 
 ## Changes
+- Version 3.0.3 Update dev dependencies
 - Version 3.0.2 Update readme
 - Version 3.0.1 Remove self dependency (:/)
 - Version 3.0.0 Upgrade peer deps (and internal deps) for React 16
